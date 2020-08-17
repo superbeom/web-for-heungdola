@@ -1,7 +1,6 @@
 import React from "react";
 import { HashRouter as Router } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
-import GlobalStyles from "../styles/GlobalStyles";
 import Theme from "../styles/Theme";
 import Routes from "./Routes";
 import Header from "./Header";
@@ -14,16 +13,13 @@ const Wrapper = styled.div`
 
 export default () => (
   <ThemeProvider theme={Theme}>
-    <>
-      <GlobalStyles />
-      <Router>
-        <>
-          <Header />
-          <Wrapper>
-            <Routes />
-          </Wrapper>
-        </>
-      </Router>
-    </>
+    <Router>
+      <>
+        {/* <Header /> */}
+        <Wrapper>
+          <Routes />
+        </Wrapper>
+      </>
+    </Router>
   </ThemeProvider>
 );

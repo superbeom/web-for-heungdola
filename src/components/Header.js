@@ -8,12 +8,17 @@ const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: ${(props) => props.theme.redColor};
+  /* background-color: ${(props) => props.theme.redColor}; */
+  background-color: ${(props) => props.theme.lightRedColor};
   border-bottom: ${(props) => props.theme.boxBorder};
   border-radius: 0px;
   ${(props) => props.theme.flexBox}
-  padding: 25px 0px;
+  padding: 5px 0px;
   z-index: 2;
+`;
+
+const CalculatorLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const Text = styled.h1`
@@ -24,9 +29,9 @@ const Text = styled.h1`
 export default () => {
   return (
     <Header>
-      <Link to="/">
-        <Text>HOME</Text>
-      </Link>
+      <CalculatorLink to="/">
+        <Text>Days Calculator</Text>
+      </CalculatorLink>
     </Header>
   );
 };
