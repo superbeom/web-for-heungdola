@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://dayscalulator.netlify.app/sitemap.xml
